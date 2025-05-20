@@ -1,5 +1,6 @@
 import requests
 from tinydb import TinyDB
+from datetime import datetime
 
 def extrair():
     url = "https://api.coinbase.com/v2/prices/spot"
@@ -13,7 +14,8 @@ def transformar(dados_json):
     dados_tratados = {
         "valor": valor,
         "criptomoeda": criptomoeda,
-        "moeda": moeda
+        "moeda": moeda,
+        "timestamp": datetime.now().isoformat()
                 }
     return dados_tratados
 

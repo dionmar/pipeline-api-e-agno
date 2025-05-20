@@ -1,3 +1,4 @@
+from cmd import IDENTCHARS
 import requests
 
 def extrair():
@@ -16,7 +17,3 @@ def transformar(dados_json):
                 }
     return dados_tratados
 
-if __name__ == "__main__":
-    dados_json = extrair()
-    dados_tratados = transformar(dados_json)
-    print(dados_tratados)
